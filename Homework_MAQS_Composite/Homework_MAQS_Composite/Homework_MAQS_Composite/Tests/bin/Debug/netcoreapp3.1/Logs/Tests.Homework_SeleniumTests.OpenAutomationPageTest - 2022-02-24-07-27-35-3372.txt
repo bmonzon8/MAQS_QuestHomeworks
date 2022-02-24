@@ -1,0 +1,105 @@
+
+2022-02-24 19:27:35.345
+INFORMATION:	Setup test object for Tests.Homework_SeleniumTests.OpenAutomationPageTest
+
+2022-02-24 19:27:37.790
+INFORMATION:	Local driver: OpenQA.Selenium.Chrome.ChromeDriver
+
+2022-02-24 19:27:38.213
+INFORMATION:	Navigated to: https://magenicautomation.azurewebsites.net/Automation.html
+
+2022-02-24 19:27:38.215
+INFORMATION:	Checking to see if the lazy element 'Show Dialog button' is displayed
+
+2022-02-24 19:27:48.325
+ERROR:	
+Timed out after 10 seconds: Waiting for existing element
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.Wait.ForElementExist(By by)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetRawExistingElement()
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetElement(Func`1 getElement)
+  no such element: Unable to locate element: {"method":"css selector","selector":"#showDialog1"}
+  (Session info: chrome=98.0.4758.102)
+     at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.Events.EventFiringWebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+
+
+
+2022-02-24 19:27:48.435
+ERROR:	
+Failed to find: Show Dialog button
+Locator: By.CssSelector: #showDialog1
+Because: Timed out after 10 seconds: Waiting for existing element
+
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetElement(Func`1 getElement)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.<get_Displayed>b__38_0()
+   at CognizantSoftvision.Maqs.Utilities.Helper.GenericWait.Wait[T](Func`1 waitFor, TimeSpan retryTime, TimeSpan timeout)
+  Timed out after 10 seconds: Waiting for existing element
+     at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.Wait.ForElementExist(By by)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetRawExistingElement()
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetElement(Func`1 getElement)
+    no such element: Unable to locate element: {"method":"css selector","selector":"#showDialog1"}
+  (Session info: chrome=98.0.4758.102)
+       at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.Events.EventFiringWebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+
+
+
+2022-02-24 19:27:48.438
+ERROR:	
+Timed out waiting for <get_Displayed>b__38_0 to return
+   at CognizantSoftvision.Maqs.Utilities.Helper.GenericWait.Wait[T](Func`1 waitFor, TimeSpan retryTime, TimeSpan timeout)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.get_Displayed()
+   at Models.AutomationPageModel.IsPageLoaded() in C:\Dev\Source\repos\GitHub\Homework_MAQS_Composite\Homework_MAQS_Composite\Homework_MAQS_Composite\Models\WebPage\AutomationPageModel.cs:line 66
+   at Models.AutomationPageModel.AssertPageLoaded() in C:\Dev\Source\repos\GitHub\Homework_MAQS_Composite\Homework_MAQS_Composite\Homework_MAQS_Composite\Models\WebPage\AutomationPageModel.cs:line 54
+   at Models.AutomationPageModel.OpenAutomationPage() in C:\Dev\Source\repos\GitHub\Homework_MAQS_Composite\Homework_MAQS_Composite\Homework_MAQS_Composite\Models\WebPage\AutomationPageModel.cs:line 45
+   at Tests.Homework_SeleniumTests.OpenAutomationPageTest() in C:\Dev\Source\repos\GitHub\Homework_MAQS_Composite\Homework_MAQS_Composite\Homework_MAQS_Composite\Tests\Homework\Homework_SeleniumTests.cs:line 55
+  Failed to find: Show Dialog button
+Locator: By.CssSelector: #showDialog1
+Because: Timed out after 10 seconds: Waiting for existing element
+
+     at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetElement(Func`1 getElement)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.<get_Displayed>b__38_0()
+   at CognizantSoftvision.Maqs.Utilities.Helper.GenericWait.Wait[T](Func`1 waitFor, TimeSpan retryTime, TimeSpan timeout)
+    Timed out after 10 seconds: Waiting for existing element
+       at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.Wait.ForElementExist(By by)
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetRawExistingElement()
+   at CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions.AbstractLazyIWebElement.GetElement(Func`1 getElement)
+      no such element: Unable to locate element: {"method":"css selector","selector":"#showDialog1"}
+  (Session info: chrome=98.0.4758.102)
+         at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.Events.EventFiringWebDriver.FindElement(By by)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)
+
+
+
+2022-02-24 19:27:48.445
+ERROR:	Test failed
+
+2022-02-24 19:27:48.586
+INFORMATION:	Screenshot saved: C:\Dev\Source\repos\GitHub\Homework_MAQS_Composite\Homework_MAQS_Composite\Homework_MAQS_Composite\Tests\bin\Debug\netcoreapp3.1\Logs\Tests.Homework_SeleniumTests.OpenAutomationPageTest - 2022-02-24-07-27-35-3372 Final.Png
