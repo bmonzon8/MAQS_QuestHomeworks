@@ -73,7 +73,11 @@ namespace Models
         {
             get { return this.GetLazyElement(By.CssSelector("#showDialog1"), "Show Dialog button"); }
         }
+        private LazyElement CloseDialogButton1
 
+        {
+            get { return this.GetLazyElement(By.CssSelector("locatorName"), "Show Dialog button"); }
+        }
         /// <summary>
         /// Clicks on a button
         /// </summary>

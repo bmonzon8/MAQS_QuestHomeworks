@@ -99,6 +99,7 @@ namespace Models
         {
             this.EnterCredentials(userName, password);
             this.LoginButton.Click();
+
             return this.ErrorMessage.Displayed;
         }
 

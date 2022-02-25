@@ -1,6 +1,7 @@
 using CognizantSoftvision.Maqs.BaseDatabaseTest;
 using CognizantSoftvision.Maqs.BaseSeleniumTest;
 using CognizantSoftvision.Maqs.BaseWebServiceTest;
+using CognizantSoftvision.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models;
 using System;
@@ -86,6 +87,9 @@ namespace Tests
 
 
         }
-
+        public static string GetUserName()
+        {
+            return Config.GetValueForSection("GlobalMaqs", "userName");
+        }
     }
 }
