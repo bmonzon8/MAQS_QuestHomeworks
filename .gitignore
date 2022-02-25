@@ -3,11 +3,11 @@
 ################################################################################
 !.git
 !.vs
-/Homework_MAQS_Composite/.vs/Homework_MAQS_Composite
+/Homework_MAQS_Composite/.vs/Homework_MAQS_Composite/
 /Homework_MAQS_Composite/Homework_MAQS_Composite/Models/obj/
-/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/obj/Debug/netcoreapp3.1
-/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/bin/Debug/netcoreapp3.1
-/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/Debug
-/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/bin
-/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/Debug
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/obj/Debug/netcoreapp3.1/
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/bin/Debug/netcoreapp3.1/
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/Debug/
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/bin/
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/Debug/
 
