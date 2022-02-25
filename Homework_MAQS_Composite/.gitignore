@@ -2,5 +2,7 @@
 /TestResults
 /Homework_MAQS_Composite/Tests/bin
 /Homework_MAQS_Composite/.vs
+!/obj
+!/bin
 !.vs
 
