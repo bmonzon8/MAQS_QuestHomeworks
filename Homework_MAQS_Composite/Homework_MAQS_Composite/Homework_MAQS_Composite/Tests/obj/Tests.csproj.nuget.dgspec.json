@@ -104,6 +104,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "CognizantSoftvision.Maqs": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "MSTest.TestAdapter": {
               "target": "Package",
               "version": "[2.2.8, )"

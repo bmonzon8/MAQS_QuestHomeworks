@@ -1,5 +1,6 @@
 ﻿using CognizantSoftvision.Maqs.BaseSeleniumTest;
 using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
+using CognizantSoftvision.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
@@ -84,6 +85,9 @@ namespace Models
         public HomePageModel LoginWithValidCredentials(string userName, string password)
         {
             this.EnterCredentials(userName, password);
+
+           
+
             this.LoginButton.Click();
 
             return new HomePageModel(this.TestObject);

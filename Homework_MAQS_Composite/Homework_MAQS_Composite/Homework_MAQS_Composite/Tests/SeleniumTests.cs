@@ -72,33 +72,45 @@ namespace Tests
         [TestMethod]
         public void Homework_EnterValidCredentialsTest()
         {
-            string userName = GetUserName();
-            string password = GetPassword();
-
-           
-         
+            string userName = GenericWait.WaitFor<string>(GetUserName);
+            string password = GenericWait.WaitFor<string>(GetPassword);
+            
+            
+            //timer for test
+            this.PerfTimerCollection.StartTimer("Test Timer");
 
             LoginPageModel page = new LoginPageModel(this.TestObject);
             page.OpenLoginPage();
+            
 
-            //suspend loggin
+            //suspend logs 
             this.Log.LogMessage(MessageType.INFORMATION, "INFORMATION - Suspending Logging -- %%% 1 %%%");
             this.Log.SuspendLogging();
-
+            
+            //timer to get time to login
+            this.PerfTimerCollection.StartTimer("Login Timer");
+            
             //perform login action
             HomePageModel homepage = page.LoginWithValidCredentials(userName, password);
+           
+            //stop login timer
+            this.PerfTimerCollection.StopTimer("Login Timer");
 
-            //continue login 
+            //continue logs  
             this.Log.LogMessage(MessageType.INFORMATION, "INFORMATION - Resuming Logging -- %%% 2 %%%");
             this.Log.ContinueLogging();
 
-            // Show logging level is respected
+            // Show logging level is respected and only logs the level specified in Appsettings.json
             this.Log.LogMessage(MessageType.VERBOSE, "VERBOSE - Will not see in log file.");
-            this.Log.LogMessage(MessageType.INFORMATION, "INFORMATION - Will see in log file -- %%% BYRON %%%");
-            this.Log.LogMessage(MessageType.GENERIC, "GENERIC - Will see in log file.");
+            this.Log.LogMessage(MessageType.INFORMATION, "INFORMATION - Successfully Logged in  -- %%% BYRON %%%");
+            this.Log.LogMessage(MessageType.GENERIC, "GENERIC - Will see in log file.  -- ### BYRON ###");
+
+            //Stop Test Timer
+            //login
+            this.PerfTimerCollection.StopTimer("Test Timer");
 
             Assert.IsTrue(homepage.IsPageLoaded());
-            Assert.Fail("Fail so that we can see the log message in the log file");
+            //Assert.Fail("Fail so that we can see the log message in the log file");
 
 
         }
