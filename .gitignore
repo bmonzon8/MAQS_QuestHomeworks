@@ -1,5 +1,10 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+!.git
+!.vs
 /Homework_MAQS_Composite/.vs/Homework_MAQS_Composite
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/obj
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Models/Debug
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/obj
+/Homework_MAQS_Composite/Homework_MAQS_Composite/Tests/Debug
