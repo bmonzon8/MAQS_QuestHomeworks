@@ -96,9 +96,29 @@ namespace Tests.Homework
         {
             try
             {
-                var response = this.WebServiceDriver.GetWithResponse("authTripsAPI/6/trips", "application/json", System.Net.HttpStatusCode.OK);
+                var response = this.WebServiceDriver.GetWithResponse("authTripsAPI/6/trips/1", "application/json", System.Net.HttpStatusCode.OK);
                 TripJson result = WebServiceUtils.DeserializeJson<TripJson>(response);
-                Console.WriteLine("The response id value is:  " + result.id);
+                Console.WriteLine("The response id value is:  " + result.name);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+            finally
+            {
+
+            }
+        }
+
+        [TestCategory("Trip WebService Tests")]
+        [TestMethod]
+        public void NotWorking_GetUserWithResponse()
+        {
+            try
+            {
+                var response = this.WebServiceDriver.GetWithResponse("authTripsAPI/users", "application/json", System.Net.HttpStatusCode.OK);
+                TripUser result = WebServiceUtils.DeserializeJson<TripUser>(response);
+                Console.WriteLine("The response id value is:  " + result.NumberOfTrips.ToString());
             }
             catch (Exception e)
             {
