@@ -38,37 +38,7 @@ namespace Tests.Homework
         }
 
        
-        [TestCategory("Trip WebService Tests")]
-        [TestMethod]
-        public void GetCurrentUserInfo()
-        {
-            try
-            {
-                TripUser result = this.WebServiceDriver.Get<TripUser>("authTripsAPI/users", "application/json",false);
-
-                Console.WriteLine("The Result data is: " + result.ToString());
-
-
-                //Console.WriteLine("The userId is: " + result.UserId.ToString());
-
-               // Assert.IsTrue(result.Contains("8"), "userid must match who I am");
-               
-
-
-                Assert.IsNotNull(result);
-
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-            finally
-            {
-
-            }
-
-        }
-
+       
 
         [TestCategory("Trip WebService Tests")]
         [TestMethod]
@@ -109,35 +79,16 @@ namespace Tests.Homework
 
             }
         }
-
-        [TestCategory("Trip WebService Tests")]
-        [TestMethod]
-        public void NotWorking_GetUserWithResponse()
-        {
-            try
-            {
-                var response = this.WebServiceDriver.GetWithResponse("authTripsAPI/users", "application/json", System.Net.HttpStatusCode.OK);
-                TripUser result = WebServiceUtils.DeserializeJson<TripUser>(response);
-                Console.WriteLine("The response id value is:  " + result.NumberOfTrips.ToString());
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
-            finally
-            {
-
-            }
-        }
-
         [TestCategory("Trip WebService Tests")]
         [TestMethod]
         public void GetUserAsObject()
         {
             try
             {
-                var response = this.WebServiceDriver.Get<TripUser>("authTripsAPI/users", "application/json");
-                Console.WriteLine("The response user value is:  " + response.UserId);
+                var response = this.WebServiceDriver.Get<UserJson>("authTripsAPI/users", "application/json");
+                //var temp = WebServiceUtils.DeserializeJson<TripUser>(response);
+
+                Console.WriteLine("The response user value is:  " + response.Value.UserId);
             }
             catch (Exception e)
             {

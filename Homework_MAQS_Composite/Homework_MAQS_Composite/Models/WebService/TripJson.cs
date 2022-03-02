@@ -19,6 +19,14 @@ namespace Models.WebService
         public int NumberOfTrips { get; set; }
 
     }
+
+    public class UserJson
+    {
+        [JsonProperty("value")]
+        public TripUser Value { get; set; }
+
+    }
+
     public class TripJson
     {
         public int id { get; set; }
