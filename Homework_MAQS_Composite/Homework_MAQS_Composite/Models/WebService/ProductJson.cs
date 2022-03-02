@@ -2,9 +2,6 @@
 
 namespace Models.WebService
 {
-    /// <summary>
-    /// Definition of a product in json
-    /// </summary>
     public class ProductJson
     {
         /// <summary>
